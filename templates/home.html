@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <title>Jovian Careers</title>
+    <style>
+      #banner {
+        height: 500px;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="text-center">{{company_name}} Careers</h1>
+
+      <img id="banner" class="img-fluid" src="/static/banner.jpg" />
+      <h2 class="text-center mt-2 mb-4">About Jovian</h2>
+      <p class="lead">
+        Jovian Careers is an online learning and career advancement platform
+        designed to help individuals build successful careers in data science,
+        machine learning, and software development. It offers industry-focused
+        courses created by experts, combining interactive lessons, practical
+        projects, and mentorship to help learners gain real-world experience.
+        Jovian’s programs emphasize hands-on learning with tools like Python,
+        SQL, Power BI, and machine learning libraries, preparing students for
+        technical interviews and data-driven roles. The platform also provides
+        career services such as resume reviews, mock interviews, and job
+        placement support, making it a comprehensive path for anyone aiming to
+        transition into or grow within the tech industry.
+      </p>
+      <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+      <p class="text-center" class="bodytext">Open Positions</p>
+      <div>{% for job in jobs %} {% include 'jobitem.html' %} {% endfor %}</div>
+      <div class="text-center">
+        <button type="button" class="btn btn-primary btn-sm">Contact Us</button>
+      </div>
+    </div>
+    <p style="text-align: center" class="mt-2 mb-2">
+      Copyright 2025, @Siddhant Ghosh
+    </p>
+  </body>
+</html>
